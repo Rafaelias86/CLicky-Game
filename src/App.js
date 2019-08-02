@@ -1,24 +1,24 @@
 import React, { Component } from "react";
-import elements from "./elements.json";
+import ImageFileNames from "./ImageFileNames";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import ImgBlockLis from "./components/ImgBlockLis";
+import ImageBlockListing from "./components/ImageBlockListing";
 import Footer from "./components/Footer";
 
 
 class App extends Component {
 	state = {
-    elements,
+    imageFileNames: ImageFileNames,
     clickedImages: [],
     score: 0,
     topScore: 0,
-    feedback: "Click a GIF to begin!",
+    feedback: "Click an image to begin!",
     gameStatus: 0 //gameStatus: 0 => game in progresss, 1 => game won, 2 => game lost
   };
 
   componentDidMount() {
     this.setState({
-      image: this.shuffle(this.state.image)
+      imageFileNames: this.shuffle(this.state.imageFileNames)
     }, () => {
       console.log("Shuffled the images on game start");
     });
@@ -27,14 +27,14 @@ class App extends Component {
   handleClick = event => {
     // console.log(event.target); // example output => <img class="col-md-3 col-sm-4 col-xs-12 pb-4 imageBlock" src="/static/media/alchemist.ce4808c0.png" alt="alchemist.png">
     // console.log(event.target.alt); // example output => alchemist.png
-    const clickedImage = event.target.alt;
-    // console.log("The clicked image is: " + clickedImage);
+    const clickedImageFileName = event.target.alt;
+    // console.log("The clicked image is: " + clickedImageFileName);
     // console.log("state BEFORE: " + JSON.stringify(this.state));
-    const wasImageClickedBefore = this.imageClickedBefore(clickedImage);
+    const wasImageClickedBefore = this.imageClickedBefore(clickedImageFileName);
     if (wasImageClickedBefore) {
       this.setState({
-        image: this.shuffle(this.state.image),
-        // image: this.state.image, //for debugging only
+        imageFileNames: this.shuffle(this.state.imageFileNames),
+        // imageFileNames: this.state.imageFileNames, //for debugging only
         clickedImages: [],
         score: 0,
         feedback: "Game Over! You Guessed The Same Image Twice!",
@@ -44,10 +44,10 @@ class App extends Component {
       });
     } else {
       let newScore = this.state.score + 1;
-      if (newScore === this.state.image.length) {
+      if (newScore === this.state.imageFileNames.length) {
         this.setState({
-        image: this.shuffle(this.state.image),
-        // image: this.state.image, //for debugging only
+        imageFileNames: this.shuffle(this.state.imageFileNames),
+        // imageFileNames: this.state.imageFileNames, //for debugging only
           clickedImages: [],
           score: 0,
           topScore: newScore,
@@ -56,11 +56,11 @@ class App extends Component {
           });
       } else {
         const clickedImagesCopy = this.state.clickedImages.slice();
-        clickedImagesCopy.push(clickedImage);
+        clickedImagesCopy.push(clickedImageFileName);
         const newTopScore = (newScore > this.state.topScore) ? newScore : this.state.topScore;
         this.setState({
-        image: this.shuffle(this.state.image),
-        // image: this.state.image, //for debugging only
+        imageFileNames: this.shuffle(this.state.imageFileNames),
+        // imageFileNames: this.state.imageFileNames, //for debugging only
           clickedImages: clickedImagesCopy,
           score: newScore,
           topScore: newTopScore,
@@ -73,9 +73,9 @@ class App extends Component {
     }
   };
 
-  imageClickedBefore = (clickedImage) => {
+  imageClickedBefore = (clickedImageFileName) => {
   	for (let index=0; index<this.state.clickedImages.length; index++) {
-  		if (this.state.clickedImages[index] === clickedImage) {
+  		if (this.state.clickedImages[index] === clickedImageFileName) {
         return true;
       }
     }
@@ -103,16 +103,9 @@ class App extends Component {
   render() {
    return (
     <div>
-      <Navbar 
-        score={this.state.score} 
-        topScore={this.state.topScore} 
-        feedback={this.state.feedback} 
-        gameStatus={this.state.gameStatus} />
+      <Navbar score={this.state.score} topScore={this.state.topScore} feedback={this.state.feedback} gameStatus={this.state.gameStatus} />
       <Banner />
-      <ImgBlockLis   
-        image={this.state.image} 
-        clickHandler={this.handleClick} 
-        gameStatus={this.state.gameStatus} />
+      <ImageBlockListing imageFileNames={this.state.imageFileNames} clickHandler={this.handleClick} gameStatus={this.state.gameStatus} />
       <Footer />
     </div>
     );
@@ -120,3 +113,4 @@ class App extends Component {
 }
 
 export default App;
+

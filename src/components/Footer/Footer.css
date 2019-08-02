@@ -1,8 +1,10 @@
 .footer {
-    height: 100px;
+    height: 70px;
     color: #fff;
     background: rgb(52, 52, 59);
     position: relative;
+    margin-top: 15px;
+    
   }
   
   .footer span {

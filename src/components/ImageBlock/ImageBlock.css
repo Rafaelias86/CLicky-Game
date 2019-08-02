@@ -1,11 +1,15 @@
-.imgBlock {
+.imageBlock {
 	cursor: pointer;
-	background: #AEAEAE;
-	transition: all .3s ease-in-out;
+	/* background: #AEAEAE; */
+    transition: all .3s ease-in-out;
+    border-radius: 25px;
+    height: 190px;
+    width: 200px;
+    overflow: hidden;
 }
 
-.imgBlock:hover {
-	transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.imageBlock:hover {
+	transform: scale(0.9); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 	background: #F0F0F0;
 }
 

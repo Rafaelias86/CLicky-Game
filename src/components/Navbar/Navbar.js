@@ -7,7 +7,7 @@ const Navbar = props => (
         <div className="col-md-4">
           <h2><a href="." className="text-white nounderline" id="app-name">Clicky Game</a></h2>
         </div>
-        <div className={"col-md-4 " + (props.gameStatus == "2" ? " text-danger" : (props.gameStatus == "1" ? " text-success" : " text-info"))}>
+        <div className={"col-md-4 " + (props.gameStatus === "2" ? " text-danger" : (props.gameStatus === "1" ? " text-success" : " text-info"))}>
           <h3>{props.feedback}</h3>
         </div>
         <div className="col-md-4 text-muted">
