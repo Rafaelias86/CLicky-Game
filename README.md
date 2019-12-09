@@ -28,7 +28,7 @@
 - JSON
 - Deployed on Heroku
 
-## [PLAY CICKY-GAME](https://rafa-clicky-game.herokuapp.com/) 
+## [PLAY CLICKY-GAME](https://rafa-clicky-game.herokuapp.com/) 
 
 
 
