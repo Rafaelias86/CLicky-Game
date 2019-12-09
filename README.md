@@ -1,7 +1,7 @@
 
 # Clicky-Game (React.js)
 
-## Developers
+## Developer:
 
 * [RAFAEL UZCATEGUI](https://github.com/Rafaelias86)
 
