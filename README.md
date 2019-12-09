@@ -1,69 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Clicky-Game (React.js)
 
-In the project directory, you can run:
+## Developers
 
-### `npm start`
+* [RAFAEL UZCATEGUI](https://github.com/Rafaelias86)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### About
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* `CLICKY-GAME` is a memory game built with `React.js` The goal of the game is simple, using your mouse, `CLICK` each of the twelve `Tech Gifs` character cards in whatever order you chose - the order does not matter, only that you do not click the same card twice!  
 
-### `npm test`
+* `EACH` click triggers the board of cards to reshuffle, thus, you cannot simply click the cards in the order in which they appear on screen.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* `COUNTERS` displayed to the top right and left of the board keep track of your current as well as top score.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Summary
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* `CLICKY-GAME` is built with `React.js`. Thus, the application is component based, able to keeps track of change events using `state`, and updates to the page render dynamically and without page refresh.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technologies Used
+- React 
+- HTML
+- CSS
+- Bootstrap
+- Javascript
+- JQuery
+- JSON
+- Deployed on Heroku
 
-### `npm run eject`
+## [PLAY CICKY-GAME](https://rafa-clicky-game.herokuapp.com/) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# CLicky-Game
